@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+             xmlns:vm="clr-namespace:Flaggen.Views"
+             x:Class="Flaggen.Views.QuizPage">
+
+    <ContentPage.BindingContext>
+        <vm:QuizPage />
+    </ContentPage.BindingContext>
+
+    <StackLayout Orientation="Vertical" Padding="20">
+
+        <Image Source="{Binding CurrentFlag.ImageUrl}" HeightRequest="150" />
+
+        <Button Text="{Binding Options[0]}" Command="{Binding CheckAnswerCommand}" CommandParameter="{Binding Options[0]}" />
+        <Button Text="{Binding Options[1]}" Command="{Binding CheckAnswerCommand}" CommandParameter="{Binding Options[1]}" />
+        <Button Text="{Binding Options[2]}" Command="{Binding CheckAnswerCommand}" CommandParameter="{Binding Options[2]}" />
+        <Button Text="{Binding Options[3]}" Command="{Binding CheckAnswerCommand}" CommandParameter="{Binding Options[3]}" />
+
+        <Label Text="Score: " FontSize="Large" />
+        <Label Text="{Binding Score}" FontSize="Large" />
+
+        <Button Text="Next" Command="{Binding NextQuestionCommand}" />
+
+    </StackLayout>
+
+</ContentPage>
+
