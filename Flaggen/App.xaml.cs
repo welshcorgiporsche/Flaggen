@@ -20,7 +20,7 @@ namespace Flaggen
                 // Log the error message
                 Debug.WriteLine($"Error: {ex.Message}");
 
-                // Display a message to the user
+               
                 
             }
         }
